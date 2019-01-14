@@ -5,6 +5,7 @@ import com.org.entity.SysLog;
 import java.util.List;
 
 public interface SysLogMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(SysLog record);

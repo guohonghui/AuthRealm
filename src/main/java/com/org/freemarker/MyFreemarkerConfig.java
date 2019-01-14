@@ -7,18 +7,13 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import java.io.IOException;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/11.
- * @email 154040976@qq.com
- */
 public class MyFreemarkerConfig extends FreeMarkerConfigurer {
 
-  @Override
-  public void afterPropertiesSet() throws IOException, TemplateException {
-    super.afterPropertiesSet();
-    Configuration configuration=this.getConfiguration();
-    configuration.setSharedVariable("shiro",new ShiroTags());
-    configuration.setNumberFormat("#");
-  }
+    @Override
+    public void afterPropertiesSet() throws IOException, TemplateException {
+      super.afterPropertiesSet();
+      Configuration configuration=this.getConfiguration();
+      configuration.setSharedVariable("shiro",new ShiroTags());
+      configuration.setNumberFormat("#");
+    }
 }

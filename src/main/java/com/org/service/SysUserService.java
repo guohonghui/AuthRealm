@@ -4,15 +4,10 @@ package com.org.service;
 import com.org.base.BaseService;
 import com.org.entity.SysRoleUser;
 import com.org.entity.SysUser;
-import com.org.util.Checkbox;
+import com.org.utils.Checkbox;
 
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/4.
- * @email 154040976@qq.com
- */
 public interface SysUserService extends BaseService<SysUser,String> {
 
   SysUser login(String username);
@@ -50,6 +45,6 @@ public interface SysUserService extends BaseService<SysUser,String> {
 
   List<SysRoleUser> selectByCondition(SysRoleUser sysRoleUser);
 
-  public List<Checkbox> getUserRoleByJson(String id);
+  List<Checkbox> getUserRoleByJson(String id);
 
 }

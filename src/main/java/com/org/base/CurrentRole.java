@@ -1,23 +1,18 @@
 package com.org.base;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/30.
- * @email 154040976@qq.com
- */
-@Getter
-@Setter
-@ToString
+@Data
 public class CurrentRole {
 
+    @ApiModelProperty(value = "Id")
     private String id;
 
+    @ApiModelProperty(value = "角色名")
     private String roleName;
 
+    @ApiModelProperty(value = "备注")
     private String remark;
 
     public CurrentRole(String id, String roleName, String remark) {

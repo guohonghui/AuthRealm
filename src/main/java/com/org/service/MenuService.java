@@ -6,11 +6,6 @@ import com.org.entity.SysMenu;
 
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/12.
- * @email 154040976@qq.com
- */
 public interface MenuService extends BaseService<SysMenu,String> {
 
   List<SysMenu> getMenuNotSuper();
@@ -23,15 +18,15 @@ public interface MenuService extends BaseService<SysMenu,String> {
 
   List<SysMenu> getMenuChildren(String id);
 
-  public JSONArray getMenuJson(String roleId);
+  JSONArray getMenuJson(String roleId);
 
-  public JSONArray getMenuJsonList();
+  JSONArray getMenuJsonList();
 
   List<SysMenu> getMenuChildrenAll(String id);
 
-  public JSONArray getTreeUtil(String roleId);
+  JSONArray getTreeUtil(String roleId);
 
   List<SysMenu> getUserMenu(String id);
 
-  public JSONArray getMenuJsonByUser(List<SysMenu> menuList);
+  JSONArray getMenuJsonByUser(List<SysMenu> menuList);
 }

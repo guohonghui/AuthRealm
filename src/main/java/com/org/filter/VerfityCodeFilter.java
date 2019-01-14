@@ -1,5 +1,7 @@
-package com.org.core.filter;
+package com.org.filter;
 
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.web.filter.AccessControlFilter;
 
@@ -8,20 +10,18 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/29.
- * @email 154040976@qq.com
- *
  * 验证码拦截
  */
+@Data
 public class VerfityCodeFilter extends AccessControlFilter{
-    /** 是否开启验证码验证   默认true*/
+
+    @ApiModelProperty(value = "是否开启验证码验证   默认true")
     private boolean verfitiCode = true;
 
-    /** 前台提交的验证码name*/
+    @ApiModelProperty(value = "前台提交的验证码name")
     private String jcaptchaParam = "code";
 
-    /** 验证失败后setAttribute key*/
+    @ApiModelProperty(value = "验证失败后setAttribute key")
     private String failureKeyAttribute = "shiroLoginFailure";
 
     @Override
@@ -45,27 +45,4 @@ public class VerfityCodeFilter extends AccessControlFilter{
         return true;
     }
 
-    public boolean isVerfitiCode() {
-        return verfitiCode;
-    }
-
-    public void setVerfitiCode(boolean verfitiCode) {
-        this.verfitiCode = verfitiCode;
-    }
-
-    public String getJcaptchaParam() {
-        return jcaptchaParam;
-    }
-
-    public void setJcaptchaParam(String jcaptchaParam) {
-        this.jcaptchaParam = jcaptchaParam;
-    }
-
-    public String getFailureKeyAttribute() {
-        return failureKeyAttribute;
-    }
-
-    public void setFailureKeyAttribute(String failureKeyAttribute) {
-        this.failureKeyAttribute = failureKeyAttribute;
-    }
 }

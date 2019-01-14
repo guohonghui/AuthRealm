@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/12.
- * @email 154040976@qq.com
  *  mapper封装 crud
  */
 public interface BaseMapper<T,E extends Serializable>{

@@ -10,11 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/19.
- * @email 154040976@qq.com
- */
+
 @Service
 public class RoleServiceImpl extends BaseServiceImpl<SysRole,String> implements RoleService{
 
@@ -35,11 +31,6 @@ public class RoleServiceImpl extends BaseServiceImpl<SysRole,String> implements 
   public int insert(SysRole record) {
     return roleMapper.insert(record);
   }
-
- /* @Override
-  public int insertSelective(SysRole record) {
-    return roleMapper.insertSelective(record);
-  }*/
 
   @Override
   public SysRole selectByPrimaryKey(String id) {

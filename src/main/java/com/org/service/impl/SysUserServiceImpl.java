@@ -9,8 +9,8 @@ import com.org.mapper.SysRoleUserMapper;
 import com.org.mapper.SysUserMapper;
 import com.org.service.RoleService;
 import com.org.service.SysUserService;
-import com.org.util.Checkbox;
-import com.org.util.Md5Util;
+import com.org.utils.Checkbox;
+import com.org.utils.Md5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/4.
- * @email 154040976@qq.com
- */
+
 @Service
 public class SysUserServiceImpl extends BaseServiceImpl<SysUser,String> implements SysUserService {
 

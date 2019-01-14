@@ -10,13 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/28.
- * @email 154040976@qq.com
- */
 @Service
 public class RoleMenuServiceImpl extends BaseServiceImpl<SysRoleMenu,String> implements RoleMenuService {
+
     @Autowired
     private SysRoleMenuMapper roleMenuMapper;
     @Override

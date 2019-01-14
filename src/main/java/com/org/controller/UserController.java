@@ -2,14 +2,14 @@ package com.org.controller;
 
 import com.org.annotation.Log;
 import com.org.base.BaseController;
-import com.org.core.exception.MyException;
+import com.org.exception.MyException;
 import com.org.entity.SysRoleUser;
 import com.org.entity.SysUser;
 import com.org.service.RoleUserService;
 import com.org.service.SysUserService;
-import com.org.util.BeanUtil;
-import com.org.util.Checkbox;
-import com.org.util.JsonUtil;
+import com.org.utils.BeanUtil;
+import com.org.utils.Checkbox;
+import com.org.utils.JsonUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;

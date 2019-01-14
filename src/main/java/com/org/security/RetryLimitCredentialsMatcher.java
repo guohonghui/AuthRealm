@@ -1,4 +1,4 @@
-package com.org.core.shiro;
+package com.org.security;
 
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 验证器，增加了登录次数校验功能 
  */  
 public class RetryLimitCredentialsMatcher extends HashedCredentialsMatcher {  
+
     private static final Logger log = LoggerFactory.getLogger(RetryLimitCredentialsMatcher.class);
 
     private Cache<String, AtomicInteger> loginRetryCache;

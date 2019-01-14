@@ -6,8 +6,8 @@ import com.github.pagehelper.PageHelper;
 import com.org.base.BaseMapper;
 import com.org.base.BaseService;
 import com.org.base.CurrentUser;
-import com.org.core.exception.MyException;
-import com.org.util.ReType;
+import com.org.exception.MyException;
+import com.org.utils.ReType;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,11 +17,6 @@ import java.lang.reflect.Field;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/13.
- * @email 154040976@qq.com
- */
 public abstract class BaseServiceImpl <T,E extends Serializable> implements BaseService<T,E> {
 
   private static Logger logger= LoggerFactory.getLogger(BaseServiceImpl.class);

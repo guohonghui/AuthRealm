@@ -9,7 +9,7 @@ import com.org.mapper.SysMenuMapper;
 import com.org.mapper.SysRoleMenuMapper;
 import com.org.service.MenuService;
 import com.org.service.SysUserService;
-import com.org.util.TreeUtil;
+import com.org.utils.TreeUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +18,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/12.
- * @email 154040976@qq.com
- */
 @Service
 public class MenuServiceImpl extends BaseServiceImpl<SysMenu,String> implements MenuService {
 

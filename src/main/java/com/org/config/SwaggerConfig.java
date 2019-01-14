@@ -11,21 +11,17 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/**
- * @author zhuxiaomeng
- * @date 2017/12/31.
- * @email 154040976@qq.com
- */
 @Configuration
 @EnableSwagger2
 @EnableWebMvc
 public class SwaggerConfig {
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.len.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.org.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

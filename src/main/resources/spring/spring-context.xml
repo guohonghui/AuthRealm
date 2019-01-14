@@ -39,6 +39,6 @@
     <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.org.base.impl.*.*(..))"/>
   </aop:config>
 
-  <bean id="exceptionHandler" class="com.org.core.exception.CustomException"/>
+  <bean id="exceptionHandler" class="com.org.exception.CustomException"/>
 
 </beans>

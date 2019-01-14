@@ -25,7 +25,7 @@ public interface SysMenuMapper extends BaseMapper<SysMenu,String> {
 
     @Override
     int updateByPrimaryKey(SysMenu record);
-        /**获取元节点*/
+    /**获取元节点*/
     List<SysMenu> getMenuNotSuper();
 
     /**

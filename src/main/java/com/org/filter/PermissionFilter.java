@@ -1,4 +1,4 @@
-package com.org.core.filter;
+package com.org.filter;
 
 import com.org.base.CurrentUser;
 import com.org.service.MenuService;
@@ -14,9 +14,6 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/11.
- * @email 154040976@qq.com
  * 拦截器 校验用户是否已授权 未授权返回到登录界面
  */
 public class PermissionFilter extends AuthorizationFilter {
@@ -28,8 +25,7 @@ public class PermissionFilter extends AuthorizationFilter {
   private MenuService menuService;
 
   @Override
-  protected boolean isAccessAllowed(ServletRequest servletRequest, ServletResponse servletResponse,
-      Object o) throws Exception {
+  protected boolean isAccessAllowed(ServletRequest servletRequest, ServletResponse servletResponse, Object o) throws Exception {
     String[] roles=(String[])o;
 
     Subject sub = getSubject(servletRequest, servletResponse);

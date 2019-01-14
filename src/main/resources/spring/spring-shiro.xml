@@ -10,18 +10,18 @@
   <context:component-scan base-package="com.org"/>
 
   <!--定义realm-->
-  <bean id="myRealm" class="com.org.core.shiro.LoginRealm">
+  <bean id="myRealm" class="com.org.security.LoginRealm">
     <property name="credentialsMatcher" ref="credentialsMatcher"/>
   </bean>
 
-  <bean id="permissionFilter" class="com.org.core.filter.PermissionFilter"/>
+  <bean id="permissionFilter" class="com.org.filter.PermissionFilter"/>
 
   <!--目前去掉自定义拦截验证 由个人处理登录业务-->
   <!--<bean id="customAdvicFilter" class="com.len.core.filter.CustomAdvicFilter">
     <property name="failureKeyAttribute" value="shiroLoginFailure"/>
   </bean>-->
 
-  <bean id="verfityCodeFilter" class="com.org.core.filter.VerfityCodeFilter">
+  <bean id="verfityCodeFilter" class="com.org.filter.VerfityCodeFilter">
     <property name="failureKeyAttribute" value="shiroLoginFailure"/>
     <property name="jcaptchaParam" value="code"/>
     <property name="verfitiCode" value="true"/>
@@ -76,7 +76,7 @@
 
   <!-- 凭证匹配器 -->
   <bean id="credentialsMatcher"
-    class="com.org.core.shiro.RetryLimitCredentialsMatcher">
+    class="com.org.security.RetryLimitCredentialsMatcher">
     <constructor-arg index="0" ref="cacheManager"/>
     <constructor-arg index="1" value="5"/>
     <property name="hashAlgorithmName" value="md5"/>

@@ -1,10 +1,10 @@
 package com.org.annotation;
 
 import com.org.base.CurrentUser;
-import com.org.core.shiro.ShiroUtil;
+import com.org.utils.ShiroUtil;
 import com.org.entity.SysLog;
 import com.org.mapper.SysLogMapper;
-import com.org.util.IpUtil;
+import com.org.utils.IpUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -21,10 +21,6 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/28.
- * @email 154040976@qq.com
- *
  * 为增删改添加监控
  */
 @Aspect

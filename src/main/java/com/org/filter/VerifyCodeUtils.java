@@ -1,4 +1,7 @@
-package com.org.util;
+package com.org.filter;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,41 +14,30 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Random;
 
-public class VerifyCodeUtils {
+public class VerifyCodeUtils{  
   
-    //使用到Algerian字体，系统里没有的话需要安装字体，字体只显示大写，去掉了1,0,i,o几个容易混淆的字符  
-    public static final String VERIFY_CODES = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";  
+    @ApiModelProperty(value = "使用到Algerian字体，系统里没有的话需要安装字体，字体只显示大写，去掉了1,0,i,o几个容易混淆的字符")
+    public static final String VERIFY_CODES = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+
     private static Random random = new Random();  
   
     
     /**
      * 验证码对象
-     * @author zhou-baicheng
-     *
      */
+    @Data
     public static class Verify{
 
-        private String code;//如 1 + 2
-    	
-    	private Integer value;//如  3
-		public String getCode() {
-			return code;
-		}
-		public void setCode(String code) {
-			this.code = code;
-		}
-		public Integer getValue() {
-			return value;
-		}
-		public void setValue(Integer value) {
-			this.value = value;
-		}
+        @ApiModelProperty(value = "如 1 + 2")
+        private String code;
+
+        @ApiModelProperty(value = "如 3")
+    	private Integer value;
     }
   
     /** 
      * 使用系统默认字符源生成验证码 
-     * @param verifySize    验证码长度 
-     * @return 
+     * @return
      */  
     public static Verify generateVerify(){  
     	int number1 = new Random().nextInt(10) + 1;;
