@@ -21,10 +21,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/29.
- * @email 154040976@qq.com
- *
  * 日志监控
  */
 @Controller

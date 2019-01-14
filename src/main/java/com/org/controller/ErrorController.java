@@ -11,7 +11,7 @@ public class ErrorController {
 
   @GetMapping(value = "404")
   public String pageNotFound(){
-  return "error/404";
-}
+    return "error/404";
+  }
 
 }
