@@ -1,4 +1,4 @@
-package com.org.core.shiro;
+package com.org.utils;
 
 import com.org.base.CurrentUser;
 import org.apache.shiro.SecurityUtils;
@@ -6,9 +6,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 
 /**
- * @author zhuxiaomeng
- * @date 2017/12/28.
- * @email 154040976@qq.com
+ * shiro工具类（灵活封装 根据需要）
  */
 public class ShiroUtil {
 
@@ -19,6 +17,7 @@ public class ShiroUtil {
     public static Session getSession(){
         return getSubject().getSession();
     }
+
     public static CurrentUser getCurrentUse(){
         return (CurrentUser) getSession().getAttribute("curentUser");
     }
